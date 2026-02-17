@@ -1,10 +1,10 @@
-from aiogram import Bot, Dispatcher, types
+TOKEN = os.getenv("TOKEN")from aiogram import Bot, Dispatcher, types
 from aiogram.types import LabeledPrice
 from aiogram.filters import Command
 import asyncio
+import os
 
-BOT_TOKEN = "8507892876:AAEJx4gZ-_4x91D42bIbeVJTP6LAAnSNDDU"
-
+TOKEN = os.getenv("TOKEN")
 bot = Bot(BOT_TOKEN)
 dp = Dispatcher()
 
@@ -36,4 +36,5 @@ async def main():
     await dp.start_polling(bot)
 
 asyncio.run(main())
+
 
